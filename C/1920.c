@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 int compare(const void *first, const void *second){
-	return *(int*)a > *(int*)b ? : (*int*)a < *(int*)b ? -1 : 0);
+	return *(int*)first > *(int*)second ? : (*(int*)first < *(int*)second ? -1 : 0);
 }
 
 int binary_search(int arr[], int num, int size){
