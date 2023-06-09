@@ -19,10 +19,9 @@ int main(){
         temp = q.front();
         q.push(temp);
         q.pop();
-        num = q.front();
     }
 
-    printf("%d\n",num);
+    printf("%d\n",q.front());
 
     return 0;
 }
