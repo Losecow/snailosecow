@@ -11,3 +11,28 @@ for _ in range(20) :
         result += p * grade[rating.index(g)]
 
 print('%.6f' % (result / total))
+
+
+# 내코드
+
+A_grade = ["F", "D0", "D+", "C0", "C+", "B0", "B+", "A0", "A+"]
+grade = []
+
+sum_Grade = 0
+sum_GradeCount = 0
+
+while True:
+    try:
+        A, B, C = input().split()
+        if C != "P":
+            for i in range(len(A_grade)):
+                if C == A_grade[i]:
+                    sum_GradeCount += float(B)
+                    if i == 0:
+                        break
+                    else:
+                        sum_Grade += float(B) * ((i / 2) + 0.5)
+    except:
+        break
+        
+print(sum_Grade / sum_GradeCount)
