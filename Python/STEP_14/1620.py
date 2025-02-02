@@ -19,5 +19,3 @@ for i in range(M):
         print(poketmonNum[int(x)])
     else:
         print(poketmonName[x])
-
-# 출력값이 조금 이상한데 나중에확인인
