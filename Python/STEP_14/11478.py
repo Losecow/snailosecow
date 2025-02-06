@@ -6,4 +6,9 @@ for i in range(len(N)):
 
 print(len(total))
 
-#내일다시
+# 슬라이싱 sample
+# N = "hello"
+# print(N[0:3])  # "hel"
+# print(N[1:4])  # "ell"
+
+# 슬라이싱한 문자열들을 집합에 넣어 중복 문자열을 제거
