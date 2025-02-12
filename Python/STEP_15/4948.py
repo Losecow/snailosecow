@@ -10,20 +10,7 @@ def primeNum(x):
                 return False
         return True
 
-# while True:
-#     n = int(input())
-    
-#     if n == 0:
-#         break
-    
-#     prime = 0
-#     for i in range(n + 1, 2 * n + 1):
-#         if primeNum(i):
-#             prime += 1
-#     print(prime)
-
-
-numList = list(range(2,246912)) 
+numList = list(range(2, 246912)) 
 primNumList = []
 
 for i in numList:
