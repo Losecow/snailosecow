@@ -1,16 +1,20 @@
-import sys
-input = sys.stdin.readline
-
-parenthesis_string = [] #PS
-
 N = int(input())
 
 for i in range(N):
-    x = list(map(str, input().split()))
-    for j in range(len(x)):
-        if x[j] == "(" and x[j + 1] == ")":
-            x.pop(j)
-            x.pop(j + 1)
-    parenthesis_string.append(x)
+    x = input()
+    ps_stack = []
 
-print(parenthesis_string)
+    for j in x:
+        if j == "(":
+            ps_stack.append("(")
+        else:
+            if len(ps_stack) == 0:
+                ps_stack.append(")")
+                break
+            else:
+                ps_stack.pop()
+
+    if len(ps_stack) != 0:
+        print('NO')
+    else:
+        print('YES')
