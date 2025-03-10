@@ -25,14 +25,15 @@
 #         A[i++] <- tmp[t++]; 
 # }
 
-def merge_sort(A):
+def merge_sort(A, p ,r):
     if p < r:
-        q = (p + r) / 2
+        q = (p + r) // 2
         merge_sort(A, p, q)
-        merge_sort(A, p, q)
+        merge_sort(A, q + 1, r)
         merge(A, p, q, r)
 
 def merge(A, p, q, r):
+    global cnt, x
     i = p
     j = q + 1
     t = 1
@@ -49,7 +50,7 @@ def merge(A, p, q, r):
         tmp[t] = A[i]
         t += 1
         i += 1
-    while i <= r:
+    while j <= r:
         tmp[t] = A[j]
         t += 1
         j += 1
@@ -60,10 +61,21 @@ def merge(A, p, q, r):
         A[i] = tmp[t]
         t += 1
         i += 1
+        cnt += 1
+        if cnt == K:
+            x = tmp[t - 1]
+
             
 
 N, K = map(int, input().split())
 A = list(map(int, input().split()))
-tmp = [0 for i in range(N)]
-p = 
-merge_sort(A)
+tmp = [0 for i in range(N + 1)]
+p = 0
+r = N - 1
+cnt = 0
+x = 0
+merge_sort(A, p, r)
+if cnt < K:
+    print(-1)
+else:
+    print(x)    
