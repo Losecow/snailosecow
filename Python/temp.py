@@ -1,9 +1,3 @@
-# Exercise(1) – Python Function
+import pandas as pd
 
-def sum(n):
-    if n == 1:
-        return 1
-    else:
-        return n + sum(n - 1)
-     
-sum(10)       
+print(pd.__version__)
