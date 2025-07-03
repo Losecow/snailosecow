@@ -1,0 +1,6 @@
+num = int("".join(map(str, digits)))
+        num += 1
+        return [int(c) for c in str(num)]
+
+
+result = [int(c) for c in "124"]
