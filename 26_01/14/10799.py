@@ -2,22 +2,25 @@ import sys
 input = sys.stdin.readline
 
 n = input().strip()
-iorn = list(n)
+iron = list(n)
 
-print(iorn)
 count = 0
+ans = []
 
-while len(iorn) != 0:
+for i in range(len(iron)):
+    ans.append(iron[i])
 
-    if iorn.pop() == ")":
-        count += 1
-        temp = iorn.pop()
-        if temp == "(":
-            count -= 1
-            count *= 2
+    temp = ans.pop()
+
+    if temp == ")":
+        if iron[i - 1] == "(":
+            ans.pop()
+            count += len(ans)
         else:
-            iorn.append(temp)
+            ans.pop()
+            count += 1
     else:
-        count -= 1
+        ans.append(temp)
 
+    # print("i = ", i , ",ans = ", ans, ",count = ", count)
 print(count)
