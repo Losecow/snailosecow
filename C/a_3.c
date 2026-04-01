@@ -9,7 +9,7 @@ int main() {
     for(int i = 0; i < a; i++) {
       int height, weight;   
       float bmi;           
-      
+        
 
       scanf("%d %d", &height, &weight);
 
